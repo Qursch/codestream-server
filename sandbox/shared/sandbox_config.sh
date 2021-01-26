@@ -79,7 +79,7 @@ function sbcfg_initialize {
 	else
 		# ---- config file
 		[ -n "$sbCfgFile" ] && configParm=$sbCfgFile || configParm="$CSSVC_CONFIGURATION"
-		[ -z "$CSSVC_CFG_FILE" ] && sandutil_get_codestream_cfg_file "${sbPrefix}_SANDBOX" "$configParm" "$CSSVC_ENV"
+		[ -z "$CSSVC_CFG_FILE" ] && sandutil_get_codestream_cfg_file $sbRoot "$configParm" "$CSSVC_ENV"
 
 		# ---- Set env vars from config file
 		export CSBE_API_DEFAULT_PORT=$(get-json-property -j $CSSVC_CFG_FILE -p apiServer.port)
