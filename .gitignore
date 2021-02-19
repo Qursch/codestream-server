@@ -1,3 +1,7 @@
 .DS_Store
 .sandbox-config.sh
 log/
+
+.npm
+node_modules/
+.env
